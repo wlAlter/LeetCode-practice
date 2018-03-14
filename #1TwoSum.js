@@ -22,3 +22,5 @@ var twoSum = function(nums, target) {
 
 // tips: 数组也是可以用 array[key]=val; 这么操作的, 这样输出的数组本质还是[x1, x2, x3 ~~~], 不过这些元素的下标, 是由之前的key决定的
 // !!! 以上操作得出的Array, 元素下标不一定是从0开始的
+
+// Array.forEach 会return一个undefined
