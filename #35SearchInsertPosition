@@ -1,0 +1,33 @@
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var searchInsert = function(nums, target) {
+    
+    var len = nums.length;
+    
+    if(len<1 || !Number.isInteger(target)) return -1;
+    
+    if(nums[0]>target){
+        nums.splice(0, 0, target);
+        return 0;
+    }else if(nums[len-1]<target){
+        nums.push[target];
+        return len;
+    }else{
+        for(var i=0; i<len; i++){
+            if(nums[i]==target){
+                return i;
+            }else if(nums[i]<target){
+                continue;
+            }else if(nums[i]>target){
+                nums.splice(i-1, 0, target);
+                return i;
+            }
+        }
+    }
+    
+    
+};
+// 最早的版本没考虑target插入在'开头' '末尾'的情况. 修改后如上
