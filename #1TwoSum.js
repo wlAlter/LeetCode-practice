@@ -4,13 +4,12 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-    var result = [];
-    while(nums.length>1){
-        temp_num = nums.pop();
-        nums.forEach(function(element){
-            if(element+temp_num == target)  result = [nums.length, nums.indexOf(element)];
-        });
-        if(result.length>0) return result;
+    var position = -1;
+    var diff = 0;
+    for(var i=0; i<nums.length; i++){
+        diff = target - nums[i];
+        position = nums.indexOf(diff);
+        if(position!=-1&&position!=i) return [i, position];
     }
     
 };
