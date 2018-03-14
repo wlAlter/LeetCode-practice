@@ -21,3 +21,6 @@ var removeDuplicates = function(nums) {
 
 // 不过原答案中, 直接返回的是i+1, 这样会导致nums是原始数组的长度, 并且最后一个元素一定是重复元素.
 // 可以使用pop()或者直接修改nums.length来去掉最后一个重复元素
+
+
+// tips: 不要看不起for循环...有些基础的功能, 还是需要for循环来写, 奇淫巧技性能不一定高
