@@ -13,3 +13,4 @@
 练习下分支切换&合并
 解决冲突 master&feature1
 禁用fast forward --no-ff
+熟悉stash
