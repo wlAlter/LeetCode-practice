@@ -7,3 +7,7 @@
 ### #26RemoveDuplicatesFromSortedArray [js](https://github.com/wlAlter/LeetCode-practice/blob/master/%2326RemoveDuplicatesFromSortedArray)
 ### #27RemoveElement [js](https://github.com/wlAlter/LeetCode-practice/blob/master/%2327RemoveElement)
 ### #35SearchInsertPosition [js](https://github.com/wlAlter/LeetCode-practice/blob/master/%2335SearchInsertPosition) 最佳答案未解
+
+
+# Git使用练习
+练习下分支切换&合并
