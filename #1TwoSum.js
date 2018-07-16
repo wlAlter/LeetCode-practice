@@ -3,13 +3,13 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function(nums, target) {
+var twoSum = function (nums, target) {
     var len = nums.length,
         result = [],
         diff;
-    for(var i=0; i<len; i++){
+    for (var i = 0; i < len; i++) {
         diff = target - nums[i];
-        if(result[diff] !== undefined) return [result[diff], i];
+        if (result[diff] !== undefined) return [result[diff], i];
         result[nums[i]] = i;
     }
     return []; // 增加一个空Array, 可以确保函数被调用, 即使没有答案, 也不至于下一个接收Array的函数出异常
@@ -24,3 +24,32 @@ var twoSum = function(nums, target) {
 // !!! 以上操作得出的Array, 元素下标不一定是从0开始的
 
 // Array.forEach 会return一个undefined
+
+var twoSum = function (nums, target) {
+    let temp, ret;
+    for (let i = 0; i < nums.length; i++) {
+        temp = target - nums[i];
+        ret = nums.indexOf(temp);
+        if (ret != -1) {
+            return [i, ret];
+        }
+    }
+};
+// 最容易想到的方案 
+
+var twoSum = function (nums, target) {
+    let len = nums.length,
+        cache = {},
+        i = 0,
+        diff;
+
+    for (i = 0; i < len; i++) {
+        diff = target - nums[i];
+        if (cache[diff] !== undefined) {
+            return [i, cache[diff]];
+        } else {
+            cache[nums[i]] = i;
+        }
+    }
+}; 
+// 利用缓存思想, 将使用过的数据进行缓存, 减小二次查询数量
