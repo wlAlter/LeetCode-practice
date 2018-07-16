@@ -2,17 +2,19 @@
  * @param {number[]} nums
  * @return {number}
  */
-var removeDuplicates = function(nums) {
-    if (nums.length == 0) return 0;
-    var i = 0;
-    for (var j = 1; j < nums.length; j++) {
+var removeDuplicates = function (nums) {
+    let len = nums.length,
+        i = 0,
+        j = 1;
+    if (len == 0) return 0;
+    for (j = 1; j < len; j++) {
         if (nums[j] != nums[i]) {
             i++;
             nums[i] = nums[j];
         }
     }
-    nums.length = i+1;
-    return nums.length;
+    len = i + 1;
+    return len;
 };
 
 // 最初想用Set, Set确实可以过滤Array, 不过不符合题目要求.
