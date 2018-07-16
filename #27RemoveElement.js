@@ -35,3 +35,16 @@ var removeElement = function(nums, val) {
 
 // 第二种while方式是参考submission, i--写起来会比i++更漂亮, 不过我这么写timeout了...原答案用的for
 
+/**
+ * @param {number[]} nums
+ * @param {number} val
+ * @return {number}
+ */
+var removeElement = function(nums, val) {
+    for (let i = 0; i < nums.length; i++) {
+        if(nums[i] == val){
+            nums.splice(i, 1);
+            i--;
+        }
+    }
+};
